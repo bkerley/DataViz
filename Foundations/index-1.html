@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>welcome to bryce</title>
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <style type="text/css">
+      html {
+        font-size: 2em;
+      }
+      #zh {
+        color: yellow;
+        background-color: red;
+      }
+      svg text {
+        fill: red;
+        font-family: Helvetica;
+        font-size: smaller;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="indo-european-greetings">
+      <marquee id="en" truespeed="truespeed" scrollamount="1" scrolldelay="10">
+        welcome to bryce
+      </marquee>
+      <marquee id="fr">bienvenue a bryce</marquee>
+      <marquee id="yo">sup</marquee>
+    </h1>
+    
+    <div>
+      <button id="hi">haz klik</button>
+    </div>
+
+    <div class="non-indo-european-greetings">
+      <p id="jp">Bryceのへようこそ</p>
+      <p id="ar">مرحبا بكم بريس</p>
+      <p id="zh">欢迎的Bryce</p>
+      <p id="th">ยินดีต้อนรับสู่ใน Bryce</p>
+    </div>
+
+    <svg width="900" height="600">
+      <rect x="700" y="0" width="50" height="400" />
+      <image xlink:href="stallman-word-bubble.jpg" x="0" y="0" width="643" height="447" />
+      <text x="415" y="140">
+        Made with Emacs
+      </text>
+    </svg>
+
+    <script type="text/javascript" src="jquery-1.11.1.js"></script>
+    <script type="text/javascript">
+      jQuery(function($){
+        var n = 0;
+        $('button').click(function(){
+          $('#yo').text("hey everyone " + n);
+          n++;
+        });
+      });
+    </script>
+  </body>
+</html>

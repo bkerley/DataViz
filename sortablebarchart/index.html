@@ -1,0 +1,53 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Sortable Table</title>
+
+
+  <!--JQuery--> <script src="js/jquery-2.1.1.js"></script>
+  <!--D3--> <script src="js/d3.js"></script>
+  <!--Your Javascript--> <script src="js/script.js"></script>
+
+</head>
+<body>
+
+<style>
+
+  body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    position: relative;
+    width: 960px;
+  }
+
+  .axis text {
+    font: 10px sans-serif;
+  }
+
+  .axis path,
+  .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+  }
+
+  .bar {
+    fill: steelblue;
+    fill-opacity: .9;
+  }
+
+  .x.axis path {
+    display: none;
+  }
+
+  label {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+</style>
+
+<label><input type="checkbox"> Sort values</label>
+
+</body>
+</html>
