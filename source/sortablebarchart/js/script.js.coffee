@@ -50,11 +50,16 @@ chart = ->
       delay = (d, i) ->
         i * 20
 
-      transition.selectAll(".bar").delay(delay).attr "x", (d) ->
-        x0 d.letter
+      transition.selectAll(".bar")
+        .delay(delay)
+        .attr "x", (d) ->
+          x0 d.letter
 
-      transition.select(".x.axis").call(xAxis).selectAll("g").delay delay
-      return
+      transition.select(".x.axis")
+        .call(xAxis)
+        .selectAll("g")
+        .delay delay
+
     data.forEach (d) ->
       d.frequency = +d.frequency
       return
@@ -62,6 +67,7 @@ chart = ->
     x.domain data.map((d) ->
       d.letter
     )
+    
     y.domain [
       0
       d3.max(data, (d) ->
