@@ -38,7 +38,7 @@
         transition.selectAll(".bar").delay(delay).attr("x", function(d) {
           return x0(d.letter);
         });
-        transition.select(".x.axis").call(xAxis).selectAll("g").delay(delay);
+        return transition.select(".x.axis").call(xAxis).selectAll("g").delay(delay);
       };
       data.forEach(function(d) {
         d.frequency = +d.frequency;
