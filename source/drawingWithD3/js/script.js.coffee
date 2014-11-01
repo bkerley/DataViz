@@ -1,7 +1,7 @@
 datasette = [6, 48, 31, 39, 5, 17, 5, 46, 37, 22]
 
-d3.select 'body'
-  .selectAll 'div'
+d3.select '#example'
+  .selectAll '#example div'
   .data datasette
   .enter()
   .append 'div'
