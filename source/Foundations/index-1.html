@@ -26,6 +26,10 @@
       <marquee id="fr">bienvenue a bryce</marquee>
       <marquee id="yo">sup</marquee>
     </h1>
+    
+    <div>
+      <button id="hi">haz klik</button>
+    </div>
 
     <div class="non-indo-european-greetings">
       <p id="jp">Bryceのへようこそ</p>
@@ -45,7 +49,11 @@
     <script type="text/javascript" src="jquery-1.11.1.js"></script>
     <script type="text/javascript">
       jQuery(function($){
-        var txt = $('svg text');
+        var n = 0;
+        $('button').click(function(){
+          $('#yo').text("hey everyone " + n);
+          n++;
+        });
       });
     </script>
   </body>
