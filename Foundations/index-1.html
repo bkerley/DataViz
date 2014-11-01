@@ -50,8 +50,11 @@
     <script type="text/javascript">
       jQuery(function($){
         var n = 0;
-        $('button').click(function(){
-          $('#yo').text("hey everyone " + n);
+        var button = $('button');
+        var yo = $('#yo');
+        button.click(function(){
+          yo.text("hey everyone " + n);
+          yo.css("color", "green");
           n++;
         });
       });
